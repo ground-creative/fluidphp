@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+	
+	<!-- Pages -->
+	<page id="index">
+		<views>
+			<view>view.skeleton</view>
+			<view child="content">view.index</view>
+		</views>
+		<!--<event></event>-->
+		<resources>
+			<block>globals</block>
+			<block>index</block>
+		</resources>
+	</page>
+	
+	<page id="login-form-modal">
+		<views>
+			<view>view.login-form.modal</view>
+		</views>
+	</page>
+	
+	<page id="register-form-modal">
+		<views>
+			<view>view.register-form.modal</view>
+		</views>
+	</page>
+	
+	<page id="404">
+		<views>
+			<view>view.404</view>
+		</views>
+	</page>
+	
+	<page id="coming-soon">
+		<views>
+			<view>view.coming-soon</view>
+		</views>
+	</page>
+	
+	<page id="contact">
+		<views>
+			<view>view.skeleton</view>
+			<view child="content">view.contact</view>
+		</views>
+		<resources>
+			<block>globals</block>
+			<block>index</block>
+		</resources>
+	</page>
+	
+</package>
