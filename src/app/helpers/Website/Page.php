@@ -53,6 +53,12 @@
 				$data[ Website::RESOURCES_PARAM ] = new Resources( $resources_blocks );
 			}
 			$data[ Website::LANG_PARAM ] = $this->_getTranslator( );
+			if ( $call = ( string ) $xml_block[ 0 ]->attributes( )->callback )	// fire precompile event
+			{
+				\system\PhpToolCase\PtcEvent::listen( 'view.callback' , $call );
+				$params = array( $this->_page , &$data[ Website::DATA_PARAM ] ); 
+				\system\PhpToolCase\PtcEvent::fire( 'view.callback' , $params );
+			}
 			$view = \system\PhpToolCase\PtcView::make( 
 				ptc_path( 'views' ) . Website::VIEWS_PATH . $views[ 0 ] , $data );
 			if ( count( $views ) > 1 )

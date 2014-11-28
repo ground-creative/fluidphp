@@ -45,10 +45,11 @@
 			else
 			{
 				$try = explode( '@' , $callback );
-				if ( @class_exists( $try[ 0 ] ) )
+				$clean_name = explode( '::' , $try[ 0 ] );
+				if ( @class_exists( $clean_name[ 0 ] ) )
 				{
 					$method = ( sizeof( $try ) > 1 ) ? $try[ 1 ] : 'handle';
-					$call = array( new $try[ 0 ] , $method );
+					$call = ( false !== strpos( $try[ 0 ] , '::' ) ) ? $try[ 0 ] : array( new $try[ 0 ] , $method );
 				}
 				else	// no valid callback found
 				{

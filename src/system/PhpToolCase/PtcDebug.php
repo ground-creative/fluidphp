@@ -738,10 +738,13 @@
 				.msgTable tr.php-warning td{background-color:yellow;}
 				.msgTable tr.php-error td{background-color:orange;}
 				.msgTable tr.inspector td{background-color:lightgreen;}
-				.innerTable a.php-notice{color:lightblue;}
-				.innerTable a.exception{color:greenyellow;}.innerTable a.php-warning{color:yellow;}
-				.innerTable a.php-error{color:orange;}.innerTable a.inspector{color:lightgreen;}
-				.innerTable a.general{color:darkgrey;}.innerTable a.show-all{color:red;}
+				.innerTable a.php-notice{color:lightblue;!important;}
+				.innerTable a.exception{color:greenyellow !important;}
+				.innerTable a.php-warning{color:yellow !important;}
+				.innerTable a.php-error{color:orange !important;}
+				.innerTable a.inspector{color:lightgreen !important;}
+				.innerTable a.general{color:darkgrey !important;}
+				.innerTable a.show-all{color:red !important;}.innerTable a.top-links{color:white;}
 				#ptcDebugFilterBar{background-color:black;margin-bottom:8px;padding:4px;
 				font-size:13px;}.innerTable{z-index:10000;position:relative;background:#eee;
 				height:300px;padding:30px 10px 0 10px;overflow:auto;clear:both;}
@@ -1117,10 +1120,10 @@
 		}
 		/**
 		* Custom dump to properly format a given variable and make it more friendly to read
-		* @param 	mixed 		$var			the string to pass
-		* @param 	mixed 		$varName		some statement preceding the variable
+		* @param 	mixed 	$var			the string to pass
+		* @param 	mixed 	$varName	some statement preceding the variable
 		* @param 	string 	$indent		uses "|" as indents by default
-		* @param 	string 	$reference		a reference to prevent recursion
+		* @param 	string 	$reference	a reference to prevent recursion
 		* @param 	int 		$depth		maximun depth
 		* @return	the html output with the variable
 		*/
@@ -1208,13 +1211,13 @@
 				else if ( is_object( $avar ) )
 				{
 					$continue = true;
-					// something is wrong with the reflection
-					if ( false === strpos( @get_class( $avar ) , 'Reflection' ) )
+					if ( false === strpos( @get_class( $avar ) , 'Reflection' ) && 
+							false === strpos( @get_class( $avar ) , 'SimpleXML' ) )
 					{
 						$rf = @new \ReflectionFunction( $avar );
-						if ( ( '{closure}' == @$rf->getName( ) ) ) // work with lambda functions first
+						if ( false !== @strpos( $rf->getName( ) , '{closure}' ) ) // work with lambda functions first
 						{
-							$result .= $indent . ( $varName ? $varName . ' => ' : '');
+							@$result .= $indent . ( $varName ? $varName . ' => ' : '');
 							$result .= '<span>**RUNTIME CREATED FUNCTION** ';
 							if ( @$rf->getFileName( ) ) { $result .= @$rf->getFileName( ); } 
 							if ( @$rf->getStartLine( ) ) { $result .= ':' . @$rf->getStartLine( ); } 
@@ -1504,7 +1507,7 @@
 					{ 
 						$cat_id = str_replace( ' ' , '-' , strtolower( $k ) );
 						$div .= '<a href="#" onClick="ptc_filter_categories(\'' . $type . 
-							'Table\',\'' . $cat_id . '\')" class="' . $cat_id . '">' . $k . "(" . $v . ")</a> | "; 
+							'Table\',\'' . $cat_id . '\')" class="top-links ' . $cat_id . '">' . $k . "(" . $v . ")</a> | "; 
 					}
 					$div = substr( $div , 0 , -3 );
 					$div .= '</div>';

@@ -44,14 +44,14 @@
 				{
 					static::controller( $controller );
 				}
-			} )->prefix( \App::option( 'app.env' ) );
+			} )->prefix( \App::env( ) );
 		}
 		/**
 		*
 		*/
 		public static function page( $page )
 		{	
-			ptc_log( \App::storage( 'website' ) , 
+			ptc_log( $page , 
 				'Website page is been compiled!' , static::$_debugCategory . ' Action' );
 			$html = new Page( $page );
 			return $html->compile( $page );

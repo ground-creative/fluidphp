@@ -2,7 +2,7 @@
 
 	/**
 	* Application Interface
-	* @package	ZeroConfig MVC
+	* @package	FluidPhp MVC
 	* @author	Carlo Pietrobattista
 	*/
 	
@@ -29,6 +29,16 @@
 			ptc_log( $this->_appConfig , 'Started the application' , 'App Config' );
 		}
 		/**
+		*
+		*/
+		public function run( $print = true )
+		{
+			$check_config = ptc_array_get( $this->_appConfig , 'app.check_router_config' );
+			$response = Router::run( $check_config ); 
+			$class = get_called_class( );
+			return $class::_shutdown( $response , $print , $this );
+		}
+		/**
 		* Application start event
 		* @param	mixed	$callback		a valid callback
 		*/
@@ -45,6 +55,14 @@
 		{ 
 			static::$_stopEvent = true; 
 			return ptc_listen( 'app.stop' , $callback );
+		}
+		/**
+		*
+		*/
+		public static function env( )
+		{
+			return $env = ( '/' === substr( \App::option( 'app.env' ) , -1 ) ) ? 
+						substr( \App::option( 'app.env' ) , 0 , -1 ) : \App::option( 'app.env' );
 		}
 		/**
 		* Alias of @ref App::options( )
@@ -86,16 +104,6 @@
 				return false;
 			}
 			return ptc_array_set( static::$_storage , $key , $value );
-		}
-		/**
-		*
-		*/
-		public function run( $print = true )
-		{
-			$check_config = ptc_array_get( $this->_appConfig , 'app.check_router_config' );
-			$response = Router::run( $check_config ); 
-			$class = get_called_class( );
-			return $class::_shutdown( $response , $print , $this );
 		}
 		/**
 		*
