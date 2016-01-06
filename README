@@ -19,7 +19,11 @@ Visit phptoolcase.com for complete guides and examples.
 
 == INSTALLATION ===================================
 
+<<<<<<< HEAD
 == Use composer to install the framework: composer create-project fluidphp/fluidphp path
+=======
+== Use composer to install the framework: composer create-project -s dev fluidphp/fluidphp path
+>>>>>>> fluidphp/master
 
 == Download the source code and run composer directly: composer install
 
