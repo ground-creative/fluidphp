@@ -1,9 +1,5 @@
-{ 
-<<<<<<< HEAD
+{
 	"name": "fluidphp/fluidphp",	
-=======
-	"name": "fluidphp/framework",	
->>>>>>> fluidphp/master
 	"type": "framework",
 	"description": "A php framework",
 	"keywords": ["php framework"],
@@ -21,6 +17,6 @@
 	"require": 
 	{
 		"php": ">=5.3.0" ,
-		"fluidphp/framework": "dev-master"
+		"fluidphp/framework": "0.6.0"
 	}
 }

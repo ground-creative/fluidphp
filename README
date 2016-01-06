@@ -1,13 +1,13 @@
  
 ##########################################################
 
-LiquidPhp Version 0.6.0 open source project
+FluidPhp Version 0.6.0 open source project
 
 A powerfull framework based on the phptoolcase library.
 
 ##########################################################
 
-LiquidPhp is a framework based on the PhpToolCase library.
+FluidPhp is a framework based on the PhpToolCase library.
 
 Visit phptoolcase.com for complete guides and examples.
 
@@ -16,6 +16,12 @@ Visit phptoolcase.com for complete guides and examples.
 == Project Home: http://phptoolcase.com
 
 == Requirements: php version 5.3+
+
+== INSTALLATION ===================================
+
+== Use composer to install the framework: composer create-project -s dev fluidphp/fluidphp path
+
+== Download the source code and run composer directly: composer install
 
 
 
