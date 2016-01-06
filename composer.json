@@ -17,6 +17,6 @@
 	"require": 
 	{
 		"php": ">=5.3.0" ,
-		"fluidphp/framework": "1.*"
+		"fluidphp/framework": 1.0 - 2.0"
 	}
 }
