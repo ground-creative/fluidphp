@@ -1,8 +1,8 @@
 {
 	"name": "fluidphp/fluidphp",	
-	"type": "framework",
+	"type": "project",
 	"description": "A php framework",
-	"keywords": ["php framework"],
+	"keywords": ["fluidphp", "framework"],
 	"homepage": "http://phptoolcase.com",
 	"license": "GPL V2",
 	"authors": 
@@ -14,9 +14,10 @@
 		}
 	] ,
 	"minimum-stability": "dev" ,
+	"prefer-stable": true ,
 	"require": 
 	{
 		"php": ">=5.3.0" ,
-		"fluidphp/framework": "1.0 - 2.0"
+		"fluidphp/framework": "~1.0"
 	}
 }
