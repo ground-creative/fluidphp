@@ -1,0 +1,22 @@
+{ 
+	"name": "fluidphp/fluidphp",	
+	"type": "framework",
+	"description": "A php framework",
+	"keywords": ["php framework"],
+	"homepage": "http://phptoolcase.com",
+	"license": "GPL V2",
+	"authors": 
+	[
+		{
+			"name": "Carlo Pietrobattista",
+			"email": "carlo@salapc.com",
+			"role": "Developer"
+		}
+	] ,
+	"minimum-stability": "dev" ,
+	"require": 
+	{
+		"php": ">=5.3.0" ,
+		"fluidphp/framework": "dev-master"
+	}
+}
