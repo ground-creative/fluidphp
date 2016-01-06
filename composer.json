@@ -1,5 +1,9 @@
 { 
+<<<<<<< HEAD
 	"name": "fluidphp/fluidphp",	
+=======
+	"name": "fluidphp/framework",	
+>>>>>>> fluidphp/master
 	"type": "framework",
 	"description": "A php framework",
 	"keywords": ["php framework"],
