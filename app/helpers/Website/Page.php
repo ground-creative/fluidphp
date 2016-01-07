@@ -63,12 +63,12 @@
 												$data[ \App::option( 'website.lang_param' ) ] );
 			if ( $call = ( string ) $xml_block[ 0 ]->attributes( )->callback )	// add precompile event
 			{
-				\system\PhpToolCase\PtcEvent::listen( 'view.callback' , $call );
+				\Event::listen( 'view.callback' , $call );
 			}
-			$events = \system\PhpToolCase\PtcEvent::getEvent( 'view' );
+			$events = \Event::getEvent( 'view' );
 			if ( @$events[ 'callback' ] )								// fire precompile event
 			{
-				\system\PhpToolCase\PtcEvent::fire( 'view.callback' , $params );
+				\Event::fire( 'view.callback' , $params );
 			}
 			$elements =  $this->_xml->xpath( "//elements" );
 			if ( $elements )
@@ -80,8 +80,7 @@
 				}
 				$data[ \App::option( 'website.elements_param' ) ] =  new Elements( $storage , $data );
 			}
-			$view = \system\PhpToolCase\PtcView::make( 
-					\App::option( 'website.views_path' ) . '/' . $views[ 0 ] , $data );
+			$view = \View::make( \App::option( 'website.views_path' ) . '/' . $views[ 0 ] , $data );
 			if ( count( $views ) > 1 )
 			{
 				unset( $views[ 0 ] );

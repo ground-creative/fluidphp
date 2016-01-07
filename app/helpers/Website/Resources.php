@@ -170,7 +170,7 @@
 					}
 				}
 			}
-			$event = \system\PhpToolCase\PtcEvent::getEvents( 'website' );
+			$event = \Event::getEvents( 'website' );
 			if ( $page && static::$_fireEvent && is_array( $event ) && 
 								ptc_array_get( $event , 'resources' , false ) )
 			{

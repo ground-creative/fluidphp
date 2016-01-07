@@ -12,7 +12,7 @@
 				if ( array_key_exists( 'callback' , $data[ '@attributes' ] ) )
 				{
 					$this->_callback = ptc_array_get( $data , '@attributes.callback' );
-					\system\PhpToolCase\PtcEvent::listen( 'metatags.callback' , $this->_callback );
+					\Event::listen( 'metatags.callback' , $this->_callback );
 				}
 				unset( $data[ '@attributes' ] );
 			}
@@ -44,7 +44,7 @@
 			{
 				ptc_log( $params , 'Website metatags is beeing fired!' , 
 						\App::option( 'website.debug_category' ) . ' Action' );
-				\system\PhpToolCase\PtcEvent::fire( 'metatags.callback' , $params );
+				\Event::fire( 'metatags.callback' , $params );
 			}
 			if ( empty( $this->_data ) ){ return null; }
 			$tag = null;

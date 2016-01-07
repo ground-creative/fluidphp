@@ -22,7 +22,7 @@
 		public static function autoload( $controllers )
 		{
 			$controllers = ( is_array( $controllers ) ) ? $controllers : array( $controllers );
-			\system\PhpToolCase\PtcRouter::group( 'website.autoload' , function( ) use ( $controllers )
+			\Router::group( 'website.autoload' , function( ) use ( $controllers )
 			{
 				$xml = simplexml_load_file( \App::option( 'website.xml_config_path' ) . '/routes.xml' );
 				foreach ( $controllers as $controller )
@@ -31,7 +31,7 @@
 				}
 				if ( \App::option( 'website.auto_include_js_lang' ) )
 				{
-					\system\PhpToolCase\PtcRouter::get( '/js/website-helper/lang/{lang}.js' , function( $lang )
+					\Router::get( '/js/website-helper/lang/{lang}.js' , function( $lang )
 					{
 						header( 'Content-Type: application/javascript' );
 						if ( file_exists( \App::option( 'website.language_files_path' )  . '/' . $lang .'.js' ) )
@@ -45,7 +45,7 @@
 				}
 				if ( \App::option( 'website.use_app_prototype_js' ) )
 				{
-					\system\PhpToolCase\PtcRouter::get( '/js/website-helper/app/{prototype}.js' , function( $prototype )
+					\Router::get( '/js/website-helper/app/{prototype}.js' , function( $prototype )
 					{
 						header( 'Content-Type: application/javascript' );
 						ob_start( );
@@ -57,7 +57,7 @@
 				$helpers = \App::option( 'website.app_prototype_helpers' );
 				if ( $helpers )
 				{
-					\system\PhpToolCase\PtcRouter::get( '/js/website-helper/app/helpers/{helper}.js' , function( $helper )
+					\Router::get( '/js/website-helper/app/helpers/{helper}.js' , function( $helper )
 					{
 						header( 'Content-Type: application/javascript' );
 						ob_start( );
@@ -90,7 +90,7 @@
 			ptc_log( $page , 'Website page is been compiled!' , 
 					\App::option( 'website.debug_category' ) . ' Action' );
 			$xml = simplexml_load_file( \App::option( 'website.xml_config_path' ) . '/pages.xml' );
-			$listeners = \system\PhpToolCase\PtcEvent::get( 'website' );
+			$listeners = \Event::get( 'website' );
 			if ( is_array( $listeners ) && $listeners[ 'load_pages_xml' ] )
 			{
 				ptc_fire( 'website.load_pages_xml' , array( $page , &$xml ) );
@@ -105,7 +105,7 @@
 		{
 			$msg = 'Adding controller "' . $id . '" routes with website router helper!';
 			ptc_log( $msg , '' , \App::option( 'website.debug_category' ) . ' Config' );
-			$listeners = \system\PhpToolCase\PtcEvent::get( 'website' );
+			$listeners = \Event::get( 'website' );
 			if ( is_array( $listeners ) && $listeners[ 'load_routes_xml' ] )
 			{
 				ptc_fire( 'website.load_routes_xml' , array( $id , &$xml ) );
@@ -121,7 +121,7 @@
 			static::getLanguages( );
 			if ( $lang = \App::storage( 'website.languages.' . $controllerID ) )
 			{
-				$event = \system\PhpToolCase\PtcEvent::getEvents( 'website' );
+				$event = \Event::getEvents( 'website' );
 				if ( is_array( $event ) && ptc_array_get( $event , 'setlang' , false ) )
 				{ 
 					ptc_fire( 'website.setlang' , array( $controllerID , &$lang ) ); 
@@ -156,7 +156,7 @@
 		{
 			if ( !static::$_urlPath )
 			{
-				$protocol = \system\PhpToolCase\PtcRouter::getProtocol( );
+				$protocol = \Router::getProtocol( );
 				static::$_urlPath = $protocol . '://' . $_SERVER[ 'HTTP_HOST' ];
 			}
 			return static::$_urlPath;
@@ -168,7 +168,7 @@
 		{
 			$name = str_replace( '{current_lang}' , static::getLang( 'suffix' ) , $name );
 			$path = ( $relative ) ? null : static::host( ) . \Module::location( );
-			return $path . \system\PhpToolCase\PtcRouter::getRoute( $name );
+			return $path . \Router::getRoute( $name );
 		}
 		/**
 		*

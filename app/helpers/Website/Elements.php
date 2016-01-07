@@ -22,8 +22,7 @@
 				return $this->_cache[ $key ];
 			}
 			$this->_vars[ \App::option( 'website.elements_param' ) ] = $this;
-			return $this->_cache[ $key ] = \system\PhpToolCase\PtcView::make( 
-										\App::option( 'website.views_path' ) . '/' . 
+			return $this->_cache[ $key ] = \View::make( \App::option( 'website.views_path' ) . '/' . 
 										$this->_storage[ $key ] , $this->_vars )->compile( );
 			$this->_useCache = true;
 		}

@@ -114,7 +114,7 @@
 				$a = 0;
 				foreach ( $requests as $request )
 				{
-					$router = call_user_func_array( '\system\PhpToolCase\PtcRouter::' . $request , $params );
+					$router = call_user_func_array( '\Router::' . $request , $params );
 					foreach ( Website::getUrlPatterns( ) as $k => $v )
 					{
 						if ( preg_match( '<{' . $k . '}|{' . $k . '\?}>' , $url ) ){ $router->where( $k , $v ); }
