@@ -21,7 +21,6 @@
 		'interfaces'	=>	ptc_path( 'root' ) . '/app/interfaces' ,
 		'observers'	=>	ptc_path( 'root' ) . '/app/observers' ,
 		'xml'			=>	ptc_path( 'root' ) . '/app/xml' ,
-		'helpers'		=>	ptc_path( 'root' ) . '/app/helpers' ,
 		'lib'			=>	ptc_path( 'root' ) . '/app/lib' ,
 		'modules'		=>	ptc_path( 'root' ) . '/modules' ,
 		'public'		=>	ptc_path( 'root' ) . '/public' ,
