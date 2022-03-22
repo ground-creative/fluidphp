@@ -3,9 +3,7 @@
 
 *A powerfull framework based on the [phptoolcase](http://phptoolcase.com) library.*
 
-FluidPhp is a framework based on the PhpToolCase library.
-
-Visit [phptoolcase.com](http://phptoolcase.com) for complete guides and examples.
+FluidPhp is a framework based on the PhpToolCase library, visit [phptoolcase.com](http://phptoolcase.com) for complete guides and examples.
 
 ## Project Info
 
