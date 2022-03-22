@@ -1,27 +1,36 @@
  
-##########################################################
+# FluidPhp  Open Source Project
 
-FluidPhp 1 open source project
-
-A powerfull framework based on the phptoolcase library.
-
-##########################################################
+*A powerfull framework based on the [phptoolcase](http://phptoolcase.com) library.*
 
 FluidPhp is a framework based on the PhpToolCase library.
 
-Visit phptoolcase.com for complete guides and examples.
+Visit [phptoolcase.com](http://phptoolcase.com) for complete guides and examples.
 
-== PROJECT INFO ===================================
+## Project Info
 
-== Project Home: http://phptoolcase.com
+### Project Home
 
-== Requirements: php version 5.3+
+http://phptoolcase.com
 
-== INSTALLATION ===================================
+### Requirements
 
-== Use composer to install the framework: composer create-project fluidphp/fluidphp path
+php version 5.4+
 
-== Download the source code and run composer directly: composer install
+## INSTALLATION
+
+### Method 1
+
+Use composer to install the framework: 
+```
+composer create-project fluidphp/fluidphp foldername
+```
+### Method 2
+
+Download the source code  and run the following command
+```
+composer directly: composer install
+```
 
 
 
