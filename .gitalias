@@ -1,10 +1,13 @@
-# A collection of shortcuts for git
+### A collection of shortcuts for git ###########################
+#
 # Version 1.0
 #
+# Installation Instructions
 # Add the following 2 lines to your .git/config file
 # [include]
 #  path = ../.gitalias
-
+#
+################################################
 [alias]
 
 	current = rev-parse --abbrev-ref HEAD					# get current branch
