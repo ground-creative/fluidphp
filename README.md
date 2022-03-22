@@ -19,7 +19,7 @@ php version 5.4+
 
 ### Method 1
 
-Use composer to install the framework: 
+Use composer to install the framework
 ```
 composer create-project fluidphp/fluidphp foldername
 ```
