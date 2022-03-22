@@ -1,23 +1,31 @@
 {
-	"name": "fluidphp/fluidphp",	
+	"name": "ground-creative/fluidphp",	
 	"type": "project",
 	"description": "A php framework",
-	"keywords": ["fluidphp", "framework"],
+	  "keywords": [
+	    "php developer tools",
+	    "php framework",
+	    "application programming",
+	    "help php",
+	    "debug php",
+	    "php tools",
+	    "php toolcase",
+	    "easy php"
+	],
 	"homepage": "http://phptoolcase.com",
 	"license": "GPL V2",
+	"varsion": "v2.0.0-stable"
 	"authors": 
 	[
 		{
-			"name": "Carlo Pietrobattista",
-			"email": "irony00100@gmail.com",
-			"role": "Developer"
+		      "name": "Carlo Pietrobattista",
+		      "email": "carlo@ground-creative.com",
+		      "role": "Developer"
 		}
 	] ,
-	"minimum-stability": "dev" ,
-	"prefer-stable": true ,
 	"require": 
 	{
 		"php": ">=5.4.0" ,
-		"fluidphp/framework": "~1.0"
+		"ground-creative/fluidphp-core": "*"
 	}
 }
