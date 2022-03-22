@@ -25,9 +25,9 @@ composer create-project fluidphp/fluidphp foldername
 ```
 ### Method 2
 
-Download the source code  and run the following command
+Download the source code  and run composer directly with the following command
 ```
-composer directly: composer install
+composer install
 ```
 
 
