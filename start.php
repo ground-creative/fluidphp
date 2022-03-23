@@ -19,7 +19,7 @@
 	| ------------------------------------------------------------------------------------
 	*/
 	
-	require_once( __DIR__ . '/vendor/phptoolcase/phptoolcase/PtcHm.php' );
+	require_once( __DIR__ . '/vendor/phptoolcase/phptoolcase/lib/PtcHm.php' );
 	
 	/*
 	| ------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@
 	*/
 	
 	//HandyMan::addDir( [ 'system' => __DIR__ . '/system' ] );
-	HandyMan::addDir( [ __DIR__ . '/vendor/phptoolcase/phptoolcase' ] );
+	HandyMan::addDir( [ __DIR__ . '/vendor/phptoolcase/phptoolcase/lib' ] );
 	HandyMan::addDir( [ 'fluidphp' => __DIR__ . '/vendor/fluidphp' ] );
 	
 	/*
