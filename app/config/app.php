@@ -6,7 +6,7 @@
 	| ----------------------------------------------------------
 	|
 	| This files controls the directories and files to use with the autoloader
-	| it also hold the aliases for class names
+	| It also hold the aliases for class names and a few general configuration options
 	|
 	*/
 	
@@ -17,26 +17,26 @@
 		| Directories with classes for the autoloader
 		| ------------------------------------------------------------------------------------
 		*/
-		'directories'			=>	array( ) ,
+		'directories'			=>	[ ] ,
 		/*
 		| ------------------------------------------------------------------------------------
 		| Namespace directories with classes for the autoloader
 		| ------------------------------------------------------------------------------------
 		*/
-		'namespaces'			=>	array( ) ,
+		'namespaces'			=>	[ ] ,
 		/*
 		| ------------------------------------------------------------------------------------
 		| Class files for the autoloader
 		| ------------------------------------------------------------------------------------
 		*/
-		'files'				=>	array( ) ,
+		'files'				=>	[ ] ,
 		/*
 		| ------------------------------------------------------------------------------------
 		| Class aliases
 		| ------------------------------------------------------------------------------------
 		*/
-		'aliases'				=>	array
-		(
+		'aliases'				=>
+		[
 			// SYSTEM
 			'App'				=>	'fluidphp\framework\App' ,
 			'Cli'					=>	'fluidphp\framework\Cli' ,
@@ -51,7 +51,7 @@
 			'Model'				=>	'PtcMapper' ,
 			'Debug'				=>	'PtcDebug' ,
 			'Event'				=>	'PtcEvent'
-		) ,
+		] ,
 		/*
 		|--------------------------------------------------------------------------
 		| Application URL

@@ -1,5 +1,4 @@
- 
-# FluidPhp  Open Source Project
+ # FluidPhp  Open Source Project
 
 *A powerfull framework based on the [phptoolcase](http://phptoolcase.com) library.*
 
@@ -29,6 +28,3 @@ Download the source code  and run composer directly with the following command
 ```
 composer install
 ```
-
-
-

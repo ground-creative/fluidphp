@@ -11,9 +11,9 @@
 	|
 	*/
 	
-	return array
-	(
-		'app'		=>	ptc_path( 'root' ) . '/app' ,
+	return 
+	[
+		'app'			=>	ptc_path( 'root' ) . '/app' ,
 		'config'		=>	ptc_path( 'root' ) . '/app/config' ,
 		'controllers'	=>	ptc_path( 'root' ) . '/app/controllers' ,
 		'models'		=>	ptc_path( 'root' ) . '/app/models' ,
@@ -28,4 +28,4 @@
 		'css'			=>	ptc_path( 'root' ) . '/public/css' ,
 		'images'		=>	ptc_path( 'root' ) . '/public/images' ,
 		'storage'		=>	ptc_path( 'root' ) . '/storage'
-	);
+	];

@@ -1,6 +1,6 @@
 <?php
 
-	return array
-	(
+	return
+	[
 		'number'	=>	'0.0.1'
-	);
+	];
