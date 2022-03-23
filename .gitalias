@@ -1,22 +1,22 @@
-### A collection of shortcuts for git ###########################
+### A collection of shortcuts for git ########################################################
 #
-# Version 1.0
+# @Version 1.0.1
 #
 # Installation Instructions
 # Add the following 2 lines to your .git/config file
 # [include]
 #  path = ../.gitalias
 #
-################################################
+##############################################################################
 [alias]
 
 	current = rev-parse --abbrev-ref HEAD					# get current branch
 
-	rebuild-tags = !git tag -l | xargs git tag -d && git fetch -t	# rebuild local tags from remote
-   
-	last-com = log -1 HEAD --stat						# show last commit
+	rebuild-tags = !git tag -l | xargs git tag -d && git fetch -t		# rebuild local tags from remote
 	
-	list-alias = config --get-regexp alias					# show list of alias
+	last-com = log -1 HEAD --stat							# show last commit
+	
+	list-alias = config --get-regexp alias						# show list of alias
 	
 	no-unchanged = "!f() { git update-index --no-assume-unchanged $1; }; f"
 	
@@ -94,4 +94,9 @@
 		echo \"\\033[33m- Creating release with tag $tag from target $target\\033[0m\";\
 		echo \"\\033[36m-- Command: git push origin -f $tag\\033[0m\";\
 		git push origin -f $tag;\
+	}; f"
+	
+	# upgrade the script
+	upgrade-script =  "!f() {\
+		wget https://raw.githubusercontent.com/ground-creative/.gitalias/main/.gitalias -O .gitalias;\
 	}; f"
