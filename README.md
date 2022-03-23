@@ -21,7 +21,7 @@ php version 5.4+
 
 Use composer to install the framework
 ```
-composer create-project ground-creative/fluidphp {foldername}
+composer create-project fluidphp/fluidphp {foldername}
 ```
 ### Method 2
 

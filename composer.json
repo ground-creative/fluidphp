@@ -1,6 +1,6 @@
 {
-	"name": "ground-creative/fluidphp",	
-	"type": "project",
+	"name": "fluidphp/fluidphp",	
+	"type": "framework",
 	"description": "A php framework",
 	  "keywords": [
 	    "php developer tools",
