@@ -48,7 +48,7 @@
 			'View'				=>	'phptoolcase\View' ,
 			'DB'					=>	'phptoolcase\Db' ,
 			'QueryBuilder'			=>	'phptoolcase\QueryBuilder' ,
-			'Model'				=>	'phptoolcase\Mapper' ,
+			'Model'				=>	'phptoolcase\Model' ,
 			'Debug'				=>	'phptoolcase\Debug' ,
 			'Event'				=>	'phptoolcase\Event'
 		] ,

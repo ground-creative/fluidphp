@@ -27,7 +27,7 @@
 	| ------------------------------------------------------------------------------------
 	*/
 	
-	HandyMan::addDir( [ __DIR__ . '/vendor/phptoolcase/phptoolcase/lib' ] );
+	HandyMan::addDir( [ 'phptoolcase' => __DIR__ . '/vendor/phptoolcase/phptoolcase/lib' ] );
 	HandyMan::addDir( [ 'fluidphp' => __DIR__ . '/vendor/fluidphp' ] );
 	
 	/*
