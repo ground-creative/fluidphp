@@ -23,7 +23,7 @@
 				'db'					=>	'' ,
 				'charset'				=>	'utf8' ,
 				'query_builder'			=>	true ,
-				'query_builder_class'	=>	'QueryBuilder'
+				'query_builder_class'		=>	'QueryBuilder'
 			]
 		] ,
 		'prod'	=>
@@ -37,7 +37,7 @@
 				'db'					=>	'' ,
 				'charset'				=>	'utf8' ,
 				'query_builder'			=>	true ,
-				'query_builder_class'	=>	'QueryBuilder'
+				'query_builder_class'		=>	'QueryBuilder'
 			]
 		]
 	];

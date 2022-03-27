@@ -41,16 +41,16 @@
 			'App'				=>	'fluidphp\framework\App' ,
 			'Cli'					=>	'fluidphp\framework\Cli' ,
 			'Module'				=>	'fluidphp\framework\Module\Manager' ,
-			'HandyMan'			=>	'PtcHandyMan' ,
-			'Router'				=>	'PtcRouter' ,
-			'Form'				=>	'PtcForm' ,
-			'Auth'				=>	'PtcAuth' ,
-			'View'				=>	'PtcView' ,
-			'DB'					=>	'PtcDb' ,
-			'QueryBuilder'			=>	'PtcQueryBuilder' ,
-			'Model'				=>	'PtcMapper' ,
-			'Debug'				=>	'PtcDebug' ,
-			'Event'				=>	'PtcEvent'
+			'HandyMan'			=>	'phptoolcase\HandyMan' ,
+			'Router'				=>	'phptoolcase\Router' ,
+			'Form'				=>	'phptoolcase\Form' ,
+			'Auth'				=>	'phptoolcase\Auth' ,
+			'View'				=>	'phptoolcase\View' ,
+			'DB'					=>	'phptoolcase\Db' ,
+			'QueryBuilder'			=>	'phptoolcase\QueryBuilder' ,
+			'Model'				=>	'phptoolcase\Mapper' ,
+			'Debug'				=>	'phptoolcase\Debug' ,
+			'Event'				=>	'phptoolcase\Event'
 		] ,
 		/*
 		|--------------------------------------------------------------------------
