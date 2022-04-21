@@ -37,16 +37,15 @@
 		*/
 		'aliases'				=>
 		[
-			// SYSTEM
+			/* system */
 			'App'				=>	'fluidphp\framework\App' ,
-			'Cli'					=>	'fluidphp\framework\Cli' ,
-			'Module'				=>	'fluidphp\framework\Module\Manager' ,
+			'Cli'				=>	'fluidphp\framework\Cli' ,
+			'Module'			=>	'fluidphp\framework\Module\Manager' ,
 			'HandyMan'			=>	'phptoolcase\HandyMan' ,
-			'Router'				=>	'phptoolcase\Router' ,
-			'Form'				=>	'phptoolcase\Form' ,
+			'Router'			=>	'phptoolcase\Router' ,
 			'Auth'				=>	'phptoolcase\Auth' ,
 			'View'				=>	'phptoolcase\View' ,
-			'DB'					=>	'phptoolcase\Db' ,
+			'DB'				=>	'phptoolcase\Db' ,
 			'QueryBuilder'			=>	'phptoolcase\QueryBuilder' ,
 			'Model'				=>	'phptoolcase\Model' ,
 			'Debug'				=>	'phptoolcase\Debug' ,
@@ -60,7 +59,7 @@
 		'url' 					=>	'http://localhost' ,
 		/*
 		|--------------------------------------------------------------------------
-		| Application Main Folder Path
+		| Application Main Folder Path Ex: /path/to/som/folder
 		|--------------------------------------------------------------------------
 		*/
 		'env' 				=>	'' ,
