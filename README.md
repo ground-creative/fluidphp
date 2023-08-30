@@ -43,3 +43,4 @@ composer install
 - [Redsys](https://github.com/ground-creative/fluidphp-redsys-helper)
 - [Translator](https://github.com/ground-creative/fluidphp-translator-helper)
 - [Website](https://github.com/ground-creative/fluid-php-website-helper)
+- [User Authentication API](https://github.com/ground-creative/fluidphp-user-auth-api-helper)
