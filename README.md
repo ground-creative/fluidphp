@@ -24,10 +24,12 @@ composer create-project fluidphp/fluidphp {foldername}
 ```
 ### Method 2
 
-Download the source code  and run composer directly with the following command
+Download the source code and run composer directly with the following command
 ```
 composer install
 ```
+
+- Rename env.sample file and change the variables as needed
 
 ##  Framework Helpers
 

@@ -38,31 +38,31 @@
 		'aliases'				=>
 		[
 			/* system */
-			'App'				=>	'fluidphp\framework\App' ,
+			'App'			=>	'fluidphp\framework\App' ,
 			'Cli'				=>	'fluidphp\framework\Cli' ,
 			'Module'			=>	'fluidphp\framework\Module\Manager' ,
-			'HandyMan'			=>	'phptoolcase\HandyMan' ,
+			'HandyMan'		=>	'phptoolcase\HandyMan' ,
 			'Router'			=>	'phptoolcase\Router' ,
-			'Auth'				=>	'phptoolcase\Auth' ,
-			'View'				=>	'phptoolcase\View' ,
+			'Auth'			=>	'phptoolcase\Auth' ,
+			'View'			=>	'phptoolcase\View' ,
 			'DB'				=>	'phptoolcase\Db' ,
-			'QueryBuilder'			=>	'phptoolcase\QueryBuilder' ,
-			'Model'				=>	'phptoolcase\Model' ,
-			'Debug'				=>	'phptoolcase\Debug' ,
-			'Event'				=>	'phptoolcase\Event'
+			'QueryBuilder'		=>	'phptoolcase\QueryBuilder' ,
+			'Model'			=>	'phptoolcase\Model' ,
+			'Debug'			=>	'phptoolcase\Debug' ,
+			'Event'			=>	'phptoolcase\Event'
 		] ,
 		/*
 		|--------------------------------------------------------------------------
 		| Application URL
 		|--------------------------------------------------------------------------
 		*/
-		'url' 					=>	'http://localhost' ,
+		'url' 					=>	$_ENV['APP_URL'],
 		/*
 		|--------------------------------------------------------------------------
-		| Application Main Folder Path Ex: /path/to/som/folder
+		| Application Main Folder Path
 		|--------------------------------------------------------------------------
 		*/
-		'env' 				=>	'' ,
+		'env' 				=>	$_ENV['APP_ENV'],
 		/*
 		|--------------------------------------------------------------------------
 		| Application Timezone
@@ -80,11 +80,11 @@
 		| Check Router Configuration when building routes
 		| ------------------------------------------------------------------------------------
 		*/
-		'check_router_config'	=>	true ,
+		'check_router_config'	=>	(($_ENV['TEST_ENV']) ? true : false),
 		/*
 		| --------------------------------------------------------------------------------------
 		| Test Environment parameter
 		| --------------------------------------------------------------------------------------
 		*/
-		'test_env'				=>	true
+		'test_env'				=>	$_ENV['TEST_ENV'],
 	);

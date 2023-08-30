@@ -11,5 +11,10 @@
 	
 	Router::group( 'main' , function( )
 	{
-		 
+		Router::get( '/', function( )
+		{
+			echo "Hello";
+		});
+
+
 	} )->prefix( \App::option( 'app.env' ) );
